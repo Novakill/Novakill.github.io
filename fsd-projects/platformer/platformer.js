@@ -27,24 +27,53 @@ $(function () {
     //////////////////////////////////
 
     // TODO 1 - Enable the Grid
-    // toggleGrid();
-
+    toggleGrid();
 
     // TODO 2 - Create Platforms
+    createPlatform(0, 700, 1400, 200); //Floor
+    // Starter wall
+    createPlatform(100, 0, 50, 600); // Wall
+    //Vert 1
+    createPlatform(150, 520, 150, 80); // Vert first
 
+    createPlatform(400, 520, 200, 80); //Vert midl
 
+    createPlatform(700, 520, 220, 80); //Vert midle
 
+    createPlatform(150, 400, 50, 200); // Start Wisk
+
+    createPlatform(300, 310, 100, 30); //Vert mid
+
+    createPlatform(500, 280, 300, 30, "Blue", 280, 1200, 1); // Moving
+
+    createPlatform(1050, 620, 40, 20); // Miny Plat
+
+    // design
+    createPlatform(310, 317, 80, 15, "Blue"); //Vert mid
+    createPlatform(410, 530, 180, 60, "Blue"); //Vert midl
+    //createPlatform(400, 520, 200, 80); //Vert midl
+    createPlatform(710, 530, 200, 60, "Blue"); //Vert midle
+    //createPlatform(150, 400, 50, 200); // Start Wisk
+    createPlatform(110, 410, 80, 180, "Blue"); // Start Wisk
+    //createPlatform(150, 520, 150, 80); // Vert first
+    createPlatform(110, 530, 180, 60, "Blue"); // Vert first
+    //createPlatform(0, 700, 1400, 200); //Floor
+    createPlatform(0, 710, 1400, 180, "Blue"); //Floor
+    //createPlatform(1050, 620, 40, 20); // Miny Plat
+    createPlatform(1055, 625, 30, 10, "Blue"); // Miny Plat
+    // createPlatform(500, 280, 300, 30, "grey",280, 1200, 1); // Moving
+    //createPlatform(510, 290, 285, 10, "Blue",280, 1200, 1); // Moving
+    // createPlatform(100, 0, 50, 600);// Wall
+    createPlatform(100, 0, 50, 600, "Blue"); // Wall
 
     // TODO 3 - Create Collectables
-
-
-
-    
+    createCollectable("diamond", 1350, 600);
+    createCollectable("max", 1350, 150);
+    createCollectable("database", 200, 170, 0.5, 0.7);
     // TODO 4 - Create Cannons
-
-
-    
-    
+    createCannon("right", 400, 800);
+    createCannon("left", 200, 800);
+    createCannon("right", 690, 2200);
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
     //////////////////////////////////
