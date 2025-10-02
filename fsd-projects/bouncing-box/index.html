@@ -34,7 +34,7 @@
       (function () {
         "use strict";
         /* global jQuery */
-
+// Todo
         //////////////////////////////////////////////////////////////////
         /////////////////// SETUP DO NOT DELETE //////////////////////////
         //////////////////////////////////////////////////////////////////
@@ -55,8 +55,9 @@
         box.on("click", handleBoxClick);
 
         // moves the Box to a new position on the screen along the X-Axis
-        function moveBoxTo(newPositionX) {
+        function moveBoxTo(newPositionX, newPositionY) {
           box.css("left", newPositionX);
+          box.css("top", newPositionY);
         }
 
         // changes the text displayed on the Box
@@ -70,9 +71,13 @@
 
         // TODO 2 - Variable declarations
 
+var randNum = Math.random() * 100;
+var boardHeight = jQuery(window).height();
 var positionX = 0;
 var points = 0;
-var speed = 10;
+var speedX = 10;
+var positionY;
+var speedY = 10;
 
 
 
@@ -83,16 +88,27 @@ var speed = 10;
          */
         function update() {
 
-        moveBoxTo(positionX); // Moves box to right edge
-        positionX = positionX + speed;
+        moveBoxTo(positionX, positionY); // Moves box to right edge
+        positionX = positionX + speedX;
+        positionY = positionY + speedY
           if (positionX >= boardWidth) {
   // Code to reverse speed goes here
-  speed *= -1
+  speedX *= -1
         }
 
         if (positionX < 0) {
   // Code to reverse speed goes here
-  speed *= -1
+  speedX *= -1
+}
+
+  if (positionY >= boardHeight) {
+  // Code to reverse speed goes here
+  speedY *= -1
+        }
+
+        if (positionY < 0) {
+  // Code to reverse speed goes here
+  speedY *= -1
 }
         }
 
@@ -105,9 +121,11 @@ var speed = 10;
          */
         function handleBoxClick() {
 changeBoxText(points)
-positionX =0;
+positionX = 0;
+positionY = 0;
 points += 1;
-speed = 3 * points + 10;
+speedX = 3 * points + 10;
+speedY = 3 * points + 10;
 
 
         }
