@@ -88,6 +88,7 @@ function handleBad(data, repeat){
   setBackgroundWithMixed(data, repeat);
   animationDetails.displayType = 3;
 }
+// check
 
   /////////////////////////////////////////////////
   // BUTTON HANDLERS BELOW HERE (3-b, 4-b, 5-b) ///
