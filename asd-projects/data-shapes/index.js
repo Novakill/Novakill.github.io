@@ -36,9 +36,33 @@ $(document).ready(function () {
 
   // TODO 1: create a new shape object and add it to the array
   
+  // TODO 0 complete
 
+  var shape = {
+
+    color: "blue",
+    shape: "circle",
+    repeat: 3
+
+  }
   // TODO 2: add a new property to all data shapes
   
+ // for(var key in dataShapes){
+//if dataShapes[key].color == "red"{
+  //key.goodBehavior = "bounce"
+
+ // }
+ // else if key.color = "blue"{
+ // key.goodBehavior = "blink"
+
+ // }
+ // else {
+ // key.goodBehavior = "spin"
+
+//  }
+//key++
+
+//}
 
   // TODO 3-a: add a function that handles the static display type
   
